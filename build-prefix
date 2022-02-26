@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+
+MAINDIR="$PWD"
+
+WINE_INSTALL_DIR="$MAINDIR/out/wine-osu"
+WINE_BIN_OUT_DIR="$WINE_INSTALL_DIR/bin"
+
+export WINEARCH=win32
+export WINEPREFIX="$MAINDIR/out/WINE.win32"
+export WINE="$WINE_BIN_OUT_DIR/wine"
+export WINESERVER="$WINE_BIN_OUT_DIR/wineserver"
+export WINETRICKS="winetricks"
+
+
+
+setup_prefix() {
+  mkdir -p "$WINEPREFIX"
+  $WINETRICKS --force dotnet462
+  $WINETRICKS -q cjkfonts gdiplus
+}
+
+
+setup_prefix

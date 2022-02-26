@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+
+
+
+tar -czvf wine-bin-and-prefix.tar.gz "./out"

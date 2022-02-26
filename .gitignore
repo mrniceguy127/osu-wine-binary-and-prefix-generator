@@ -1,0 +1,6 @@
+poon-build-script/src/
+poon-build-script/pkg/
+poon-build-script/wine-*.tar*
+poon-build-script/wine-staging-v*.tar*
+out/
+wine-bin-and-prefix.tar.gz

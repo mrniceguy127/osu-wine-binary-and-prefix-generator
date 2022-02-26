@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+
+
+GENERAL_BIN_DIR_NAME="wine-osu"
+RESULT="./poon-build-script/pkg/wine-osu/opt/$GENERAL_BIN_DIR_NAME"
+OUT_LOCATION="./out/$GENERAL_BIN_DIR_NAME"
+
+cd ./poon-build-script
+
+MAKEFLAGS="-j$(nproc)" makepkg -s
+
+cd ..
+
+mv "$RESULT" "$OUT_LOCATION"

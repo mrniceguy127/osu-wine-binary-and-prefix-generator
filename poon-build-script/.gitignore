@@ -1,0 +1,8 @@
+*.log
+*.pkg.tar*
+src/
+pkg/
+known-good/
+wine/
+stash/
+

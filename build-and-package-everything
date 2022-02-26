@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+
+mkdir -p ./out
+
+./build-wine
+./build-prefix
+./pkg-binary-and-prefix
